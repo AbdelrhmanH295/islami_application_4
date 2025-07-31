@@ -24,8 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
     AppAssets.radioBg,
     AppAssets.timerBg,
   ];
-  List<Widget>tabs=[
-    QuranTab(),HadethTab(),SebhaTab(),RadioTab(),TimerTab()
+  List<Widget> tabs = [
+    QuranTab(),
+    HadethTab(),
+    SebhaTab(),
+    RadioTab(),
+    TimerTab()
   ];
   int selectedIndex = 0;
 
@@ -74,8 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ]),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [Image.asset(AppAssets.logo),
-            Expanded(child:tabs[selectedIndex])
+            children: [
+              Image.asset(AppAssets.logo),
+              Expanded(child: tabs[selectedIndex])
             ],
           ),
         )
